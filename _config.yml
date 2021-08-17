@@ -1,12 +1,12 @@
 #######################################################################################
 # Book settings
-title : Programmering og modellering
-author: Andreas Haraldsrud
-logo: 'datalogo.png'
+title : ProComp
+author: UiO
+logo: 'uio-logo.png'
 
 # Information about where the book exists on the web
 description: >-
-  Nettsider for Programmering og modellering X
+  Blabla
 
 #######################################################################################
 # Execution settings
@@ -25,7 +25,7 @@ notebook_interface            : "notebook"
 #######################################################################################
 # Launch button settings
 repository:
-  url                         : https://github.com/andreasdh/programmering-og-modellering
+  url                         : https://github.com/andreasdh/ProComp
   path_to_book                : "mini_book"
 
 binder:
