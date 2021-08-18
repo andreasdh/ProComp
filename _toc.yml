@@ -19,4 +19,4 @@ parts:
   - caption: Working instructions
     numbered: true
     chapters:
-    -file: docs/howto
+    - file: docs/howto
