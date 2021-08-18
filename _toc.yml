@@ -14,9 +14,8 @@ parts:
     - file: docs/the_basics/variables_conditionals
       sections:
       - file: docs/the_basics/variables
-    - file: docs/the_basics/loops
-    - file: docs/the_basics/data_plotting
-parts:
+      - file: docs/the_basics/loops
+      - file: docs/the_basics/data_plotting
   - caption: Working instructions
     numbered: true
     chapters:
