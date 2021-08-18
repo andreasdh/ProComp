@@ -12,7 +12,5 @@ parts:
     chapters:
     - file: docs/the_basics/scientific_programming
     - file: docs/the_basics/variables_conditionals
-          sections:
-          - file: docs/the_basics/variables
     - file: docs/the_basics/loops
     - file: docs/the_basics/data_plotting
