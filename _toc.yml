@@ -17,6 +17,6 @@ parts:
       - file: docs/the_basics/loops
       - file: docs/the_basics/data_plotting
   - caption: Working instructions
-    numbered: true
+    numbered: false
     chapters:
     - file: docs/howto
