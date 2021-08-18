@@ -11,8 +11,9 @@ parts:
     numbered: true
     chapters:
     - file: docs/the_basics/scientific_programming
-      sections:
-      - file: docs/quiz_notebooks/quiz1
     - file: docs/the_basics/variables_conditionals
+          sections:
+          - file: docs/variables
+          - file: docs/quiz_notebooks/quiz1
     - file: docs/the_basics/loops
     - file: docs/the_basics/data_plotting
