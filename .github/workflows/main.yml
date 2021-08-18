@@ -14,14 +14,14 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.7'
+          python-version: '3.8'
       
       - name: install
         run: |
           python --version
           python -m pip install setuptools
           python -m pip install -r requirements.txt
-          python -m pip install attrs==19.1.0
+          python -m pip install attrs
             
       - name: build 
         env:
