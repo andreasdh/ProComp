@@ -3,5 +3,10 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: docs/the_basics/grunnleggende_programmering_oppgaver
+parts:
+  - caption: Introduction to programming and computational thinking
+    numbered: True
+    chapters:
+      - file: docs/the_basics/grunnleggende_programmering_oppgaver
+      sections:
+        - file: docs/quiz_notebooks/quiz1
