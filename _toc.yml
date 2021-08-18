@@ -8,6 +8,7 @@ options:
 
 parts:
   - caption: Introduction to programming and computational thinking
+    numbered: true
     chapters:
     - file: docs/the_basics/grunnleggende_programmering_oppgaver
       sections:
