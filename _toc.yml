@@ -10,6 +10,9 @@ parts:
   - caption: Introduction to programming and computational thinking
     numbered: true
     chapters:
-    - file: docs/the_basics/grunnleggende_programmering_oppgaver
+    - file: docs/the_basics/scientific programming
       sections:
       - file: docs/quiz_notebooks/quiz1
+    - file: docs/the_basics/variables_conditionals
+    - file: docs/the_basics/loops
+    - file: docs/the_basics/data_plotting
