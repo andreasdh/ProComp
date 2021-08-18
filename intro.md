@@ -1,16 +1,11 @@
-# Welcome to your Jupyter Book
+# Welcome to ProComp
 
-This is a small sample book to give you a feel for how book content is
-structured.
+This is a course in how to use programming and computational thinking in mathematics and science in higher education.
 
 :::{note}
-Here is a note!
+Use the menu and pick a course for you and your colleagues.
 :::
 
-And here is a code block:
-
 ```
-e = mc^2
+print("Welcome!")
 ```
-
-Check out the content pages bundled with this sample book to see more.

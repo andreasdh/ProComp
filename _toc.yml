@@ -4,5 +4,4 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: notebooks
+- file: docs/the_basics/grunnleggende_programmering_oppgaver
