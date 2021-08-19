@@ -21,3 +21,4 @@ parts:
     numbered: false
     chapters:
     - file: docs/howto
+    - file: docs/pedagogical_principles
