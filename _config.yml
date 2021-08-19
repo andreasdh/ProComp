@@ -29,6 +29,7 @@ repository:
 parse:
   myst_enable_extensions:
     - deflist
+    - definition_lists
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
