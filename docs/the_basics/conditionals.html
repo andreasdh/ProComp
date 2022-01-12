@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2.3. Conditionals and logic &#8212; Programming and Computational Thinking</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Loops and iterative thinking" href="loops.html" />
+    <link rel="prev" title="2.2. Variables and arithmetic" href="variables.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-uio.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programming and Computational Thinking</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to ProComp
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction to programming and computational thinking
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   1. Why scientific programming?
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="variables_conditionals.html">
+   2. Variables and conditionals
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     2.2. Variables and arithmetic
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     2.3. Conditionals and logic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="loops.html">
+   3. Loops and iterative thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_plotting.html">
+   4. Handling data with Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working instructions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../howto.html">
+   Graphical elements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pedagogical_principles.html">
+   Pedagogical principles
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/the_basics/conditionals.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/the_basics/conditionals.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/docs/the_basics/conditionals.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Conditionals and logic</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="conditionals-and-logic">
+<h1><span class="section-number">2.3. </span>Conditionals and logic<a class="headerlink" href="#conditionals-and-logic" title="Permalink to this headline">¶</a></h1>
+<p>Conditionals are central in programming, but also central in everyday life. Let’s start simply with ticket prices on the bus. If the age is under 18, the price will be 3 dollars, and half the price of an adult ticket. We can describe this with the following pseudocode:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>if age &lt; 18 then price = 3
+if not then price = 62
+</pre></div>
+</div>
+<p>In Python this program will look like this:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">:</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">price</span> <span class="o">=</span> <span class="mi">62</span>
+</pre></div>
+</div>
+<p>Now we are going to look at examples where conditionals can be used to illustrate concepts in your discipline. We are using simple examples here, but it can of course be applied to more complex problems. You can choose the tab with your discipline.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="baa6eaa3-544e-4961-8911-428a5c38a5c5" name="13e34faa-e985-496f-bed6-fa3469b66609" type="radio">
+</input><label class="tabbed-label" for="baa6eaa3-544e-4961-8911-428a5c38a5c5">
+Mathematics and Physics</label><div class="tabbed-content docutils">
+<p>A good way to work with logic and programming is to concentrate on how a problem can be solved, rather than emphasizing on the syntax (that is, how we write the code).</p>
+<p>To structure a program code, you may want to use a flow chart. A flow chart provides both information about the mathematical premises and an overview of the structure of the program.</p>
+<p>An example is the following flow chart, which shows what possible outcomes we can have when solving a quadratic equation:</p>
+<p><img alt="Quadratic equation flowchart" src="https://www.mn.uio.no/kurt/livslang-lering/procomp/quadratic_equation.png" /></p>
+<p>In Python, code belonging to a condition is indented. We can therefore say that each individual condition in the flow chart represents one indent.</p>
+<p>This logic can be explored using <em>programming puzzles</em>.</p>
+<p>In a programming puzzle, all the lines of code are given as “puzzle pieces”. The task is to sort these code parts in the correct order and with the correct structure. Such puzzles are also called “Parsons problems”. The puzzles can be generated digitally from <a class="reference external" href="http://parsons.problemsolving.io/">the following webpage</a>.</p>
+<p>First solve <a class="reference external" href="http://parsons.problemsolving.io/puzzle/980be2ba272446aebbb1a3eaeb1f1bea">this puzzle about ticket prices</a>. Then use the flow chart above to solve <a class="reference external" href="http://parsons.problemsolving.io/puzzle/11a1f9881efa4f1796c7fe11efbaec3a">this programming puzzle</a>. The program will find out how many solutions we have given the coefficients a, b and c in a quadratic equation.</p>
+</div>
+<input id="dac9ff19-dc68-45b8-84b6-81da3233fcd6" name="13e34faa-e985-496f-bed6-fa3469b66609" type="radio">
+</input><label class="tabbed-label" for="dac9ff19-dc68-45b8-84b6-81da3233fcd6">
+Life Science</label><div class="tabbed-content docutils">
+<p>A good way to work with logic and programming is to concentrate on how a problem can be solved, rather than emphasizing on the syntax (that is, how we write the code).</p>
+<p>To structure a program code, you may want to use a flow chart. A flow chart provides both information about the biological premises and an overview of the structure of the program.</p>
+<p>An example is the following flow chart, which shows possible outcomes and calculations when computing the fractions of individuals with certain genotypes in a population in Hardy-Weinberg equilibrium.</p>
+<p><img alt="Hardy-Weinberg flowchart" src="https://www.mn.uio.no/kurt/livslang-lering/procomp/hardy-weinberg.png" /></p>
+<p>This logic can be explored using <em>programming puzzles</em>.</p>
+<p>In a programming puzzle, all the lines of code are given as “puzzle pieces”. The task is to sort these code parts in the correct order and with the correct structure. Such puzzles are also called “Parsons problems”. The puzzles can be generated digitally from <a class="reference external" href="http://parsons.problemsolving.io/">the following webpage</a>.</p>
+<p>First solve <a class="reference external" href="http://parsons.problemsolving.io/puzzle/980be2ba272446aebbb1a3eaeb1f1bea">this puzzle about ticket prices</a>. Then use the flow chart above to solve <a class="reference external" href="http://parsons.problemsolving.io/puzzle/43609a050a0741ed89b6e0af441b5ff2">this programming puzzle</a>. The program will find out how many individuals there are with the genotypes AA, Aa and aa.</p>
+</div>
+<input id="fc0a07ed-9f32-4ac2-b946-205689257740" name="13e34faa-e985-496f-bed6-fa3469b66609" type="radio">
+</input><label class="tabbed-label" for="fc0a07ed-9f32-4ac2-b946-205689257740">
+Chemistry</label><div class="tabbed-content docutils">
+<p>A good way to work with logic and programming is to concentrate on how a problem can be solved, rather than emphasizing on the syntax (that is, how we write the code).</p>
+<p>To structure a program code, you may want to use a flow chart. A flow chart provides both information about the chemical premises and an overview of the structure of the program.</p>
+<p>An example is the following flow chart, which shows the relation between the pH and the acidity of the solution.</p>
+<p><img alt="pH flowchart" src="https://www.mn.uio.no/kurt/livslang-lering/procomp/ph.jpg" /></p>
+<p>While this is a trivial example, implementing such a program is not always straightforward: Do you need the pH to be exactly 7 (which is almost never the case) to call it neutral? Your students need to actively think about this before making a program. (Hint: You should use a “tolerance”, that is define an interval [7-tol, 7+tol] where a solution is neutral).</p>
+<p>The flow chart logic can be explored using <em>programming puzzles</em>.</p>
+<p>In a programming puzzle, all the lines of code are given as “puzzle pieces”. The task is to sort these code parts in the correct order and with the correct structure. Such puzzles are also called “Parsons problems”. The puzzles can be generated digitally from <a class="reference external" href="http://parsons.problemsolving.io/">the following webpage</a>.</p>
+<p>First solve <a class="reference external" href="http://parsons.problemsolving.io/puzzle/980be2ba272446aebbb1a3eaeb1f1bea">this puzzle about ticket prices</a>. Then use the flow chart above to solve <a class="reference external" href="http://parsons.problemsolving.io/puzzle/55b95fd5b04e40cab48945403e69e965">this programming puzzle</a>.</p>
+</div>
+</div>
+<p>We have now seen that we use if-tests to program conditionals in Python. An example is this program which determines whether a number is odd or even:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">18</span>
+
+<span class="k">if</span> <span class="n">number</span><span class="o">%</span><span class="k">2</span> == 0:
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is even&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is odd&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number is even
+</pre></div>
+</div>
+</div>
+</div>
+<p>The operator % in the program above finds the remainder after an integer division of the variable <em>number</em> divided by 2. If the remainder is zero, the number is an even number. Note that the executed code is indented under the different conditions. Also notice the double equals sign. It’s easy to forget!</p>
+<p>When we assign a value to a variable, we use simple equal signs. When we are going to check if something is zero, however, we must use double equal signs.</p>
+<p>We can add more terms with the command <em>elif</em>, which means “else if”. First the if statement is evaluated, then all the elif statements in turn. If none of these are true, another is performed. The first condition that is true ends the row with if-elif-else. The code word <em>else</em> does not take any conditions and is executed if none of the above conditions are met.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">if</span> <span class="n">number</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is positive&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is negative&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number is zero&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The number is zero
+</pre></div>
+</div>
+</div>
+</div>
+<p>Study the example above and explain how the syntax for conditionals is structured. Then create a program that checks if a given number exists in the interval [0, 10].</p>
+<iframe src="https://trinket.io/embed/python3/9f5d5834b0?font=2em" width="100%" height="356" allowfullscreen="allowfullscreen"></iframe>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>Here are three ways of solving the above problem:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>number = 7
+
+# Solution 1
+if 0 &lt;= number &lt;= 10:
+    print(&quot;The number is in the interval.&quot;)
+else:
+    print(&quot;The number is not in the interval.&quot;)
+
+# Solution 2
+if number &gt;= 0 and number &lt;= 10:
+    print(&quot;The number is in the interval.&quot;)
+else:
+    print(&quot;The number is not in the interval.&quot;)
+
+# Solution 3
+if number &lt;= 10:
+    if number &gt;= 0:
+        print(&quot;The number is in the interval.&quot;)
+    else:
+        print(&quot;The number is not in the interval.&quot;)
+else:
+    print(&quot;The number is not in the interval.&quot;)
+</pre></div>
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Discussion</p>
+<ul class="simple">
+<li><p>Flowcharts and programming puzzles are two different ways of working with programming and computational thinking. How can you use this in your teaching?</p></li>
+<li><p>When students are to program conditionals they must think through different outcomes and structure this as a yes/no question. How does this train students in computational thinking and problem solving?</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/the_basics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="variables.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2.2. </span>Variables and arithmetic</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="loops.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Loops and iterative thinking</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The University of Oslo<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

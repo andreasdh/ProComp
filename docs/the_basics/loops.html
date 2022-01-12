@@ -1,0 +1,502 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Loops and iterative thinking &#8212; Programming and Computational Thinking</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Handling data with Python" href="data_plotting.html" />
+    <link rel="prev" title="2.3. Conditionals and logic" href="conditionals.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-uio.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programming and Computational Thinking</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../intro.html">
+   Welcome to ProComp
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction to programming and computational thinking
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="scientific_programming.html">
+   1. Why scientific programming?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="variables_conditionals.html">
+   2. Variables and conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="variables.html">
+     2.2. Variables and arithmetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="conditionals.html">
+     2.3. Conditionals and logic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Loops and iterative thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_plotting.html">
+   4. Handling data with Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working instructions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../howto.html">
+   Graphical elements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pedagogical_principles.html">
+   Pedagogical principles
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/docs/the_basics/loops.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/the_basics/loops.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/docs/the_basics/loops.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Loops and iterative thinking</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="loops-and-iterative-thinking">
+<h1><span class="section-number">3. </span>Loops and iterative thinking<a class="headerlink" href="#loops-and-iterative-thinking" title="Permalink to this headline">¶</a></h1>
+<p>A loop is a programming structure that repeats a code, either a certain number of times or until a criterion is reached.</p>
+<p>Loops allow us to take advantage of the computer’s ability to quickly perform operations multiple times. Using loops, for example, the computer can find the number 10 531 in the Fibonacci sequence in less than one second, or it can calculate the solution to an analytically insoluble equation by repeating the same operation 10000 times. Loops are the most important and useful programming structure we have.</p>
+<p>Here we will look at some basic examples to get you comfortable with how loops in Python works. Do both exercises in the tabs, and do the “discussion” exercises last.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="e6232418-3a56-495a-ad5c-3eab166de79d" name="0c954943-4dc0-47d1-b77e-4885762ef7ea" type="radio">
+</input><label class="tabbed-label" for="e6232418-3a56-495a-ad5c-3eab166de79d">
+Exercise 1</label><div class="tabbed-content docutils">
+<p>Look at these three program lines. When it says even number = even number + 2, the program will calculate the right side of the equals sign first and put it into the left side afterwards.</p>
+<p>What is the value of the variable even after the three lines?</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">even_number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">even_number</span> <span class="o">=</span> <span class="n">even_number</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="n">even_number</span> <span class="o">=</span> <span class="n">even_number</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<p>The value of the variable even_number is 4 after we run the program.</p>
+</div>
+<p>Repeating code like this can be tiresome. Enter the loops! Using a counter <em>i</em> we can for example repeat this operation 5 times:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">even_number</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">even_number</span> <span class="o">=</span> <span class="n">even_number</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>This is called a <em>for-loop</em>, which is a counting-loop that iterates (goes through) numbers in an interval. The command <em>range(1000)</em> means that we create a variable that will go through an interval specified in parentheses. If we write range(5), the interval becomes [0, 1, 2, 3, 4], that is, from 0 to - but not including - 5. If we write range(2,6), the interval becomes [2, 3, 4, 5]. If we add another argument to the range function, we can specify the step: range(2,11,2) gives the numbers [2,4,6,8,10]. Each time the loop code is repeated, the variable <em>i</em>, which we call a “count variable”, gets the next value in the interval. The loop is thus repeated five times in the code above. The indented code in the loop is repeated each time the loop runs.</p>
+<p>Try to make a loop that prints the square root of the variable <em>i</em> for every odd number of <em>i</em> in the interval [0,25]</p>
+<iframe src="https://trinket.io/embed/python3/a44e64569a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">sqrt</span> 
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<input id="26267a8e-c938-4418-ac5f-942fc388db34" name="0c954943-4dc0-47d1-b77e-4885762ef7ea" type="radio">
+</input><label class="tabbed-label" for="26267a8e-c938-4418-ac5f-942fc388db34">
+Exercise 2</label><div class="tabbed-content docutils">
+<p>Now we are going to make a program that adds together the first five even numbers. What kind of variables do you need? How do you solve this by using loops? Start by creating a pseudocode where you focus on the logic of problem solving.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">even_number</span> <span class="o">=</span> <span class="mi">0</span>   
+<span class="nb">sum</span> <span class="o">=</span> <span class="mi">0</span>  
+
+<span class="n">repeat</span> <span class="n">five</span> <span class="n">times</span><span class="p">:</span>  
+    <span class="n">increase</span> <span class="n">even_number</span> <span class="n">by</span> <span class="mi">2</span>
+    <span class="n">increase</span> <span class="nb">sum</span> <span class="n">by</span> <span class="n">even_number</span>
+
+<span class="nb">print</span> <span class="n">the</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+</div>
+<p>Now you can make a program from the pseudocode you made above. We have made some lines of code to get you started:</p>
+<iframe src="https://trinket.io/embed/python3/d6229e4824" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">even_number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">the_sum</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="n">even_number</span> <span class="o">=</span> <span class="n">even_number</span> <span class="o">+</span> <span class="mi">2</span>
+    <span class="n">the_sum</span> <span class="o">=</span> <span class="n">the_sum</span> <span class="o">+</span> <span class="n">even_number</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">the_sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>A good way to check if the loop works and does what it should, is to write a table with the values of all the variables at all steps in the loop:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>i</p></th>
+<th class="head"><p>even_number</p></th>
+<th class="head"><p>the_sum</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>2</p></td>
+<td><p>2</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>4</p></td>
+<td><p>6</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>6</p></td>
+<td><p>12</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>8</p></td>
+<td><p>20</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>10</p></td>
+<td><p>30</p></td>
+</tr>
+</tbody>
+</table>
+<p>This is called a “looping table”. Our counting variable <em>i</em> shows the step in the loop, while the other two columns are filled in by manually calculating what is in the loop. The first time the loop runs, i = 0. Then even_number = even_number + 2 = 0 + 2. The  variable the_sum becomes equal to the previous the_sum + even_number: the_sum = the_sum + even_number = 0 + 2 = 2. The next time the loop runs, i = 1. Thus even_number = 2 + 2 = 4, and the_sum = 2 + 4 = 6. This is repeated until i = 4.</p>
+<p>NB: When we are updating the variables above, we write for example even_number = even_number + 2. There is a way to write this shorter: even_number + = 2. The short form means the same thing, but for pedagogical reasons it is a good idea to start with writing the full form: even_number = even_number + 2. However, it is useful to know that the short form exists, and many students will probably use this eventually.</p>
+</div>
+<input id="22b825b5-1dab-49e1-a395-9ee320598ce0" name="0c954943-4dc0-47d1-b77e-4885762ef7ea" type="radio">
+</input><label class="tabbed-label" for="22b825b5-1dab-49e1-a395-9ee320598ce0">
+Iterative thinking</label><div class="tabbed-content docutils">
+<p>Loops make possible a new way of thinking. Several students struggle with manipulating, remembering and understanding mathematical formulas. Loops can be a way of doing mathematics and science without focusing too much on symbolic manipulation. For example, the example where you calculated sums can be generalized to almost all sums. Do you need to find the 100 000th number in the Fibbonacci sequence or calculate the sum of an infinite geometric series - thinking in loops will help you. Instead of finding special formulas for the solutions, one can solve the problems <em>iteratively</em>, that is by thinking in steps. Stepwise, iterative thinking can be helpful for students to understand dynamic phenomena.</p>
+<p>Using mathematical models and calculating the next value based on the previous value can feel more intuitive than solving formulas. By using loops you can solve rate laws in chemistry, population dynamics equations i biology or Newtons laws in physics. If you have an initial condition and a model describing the <em>change</em> of the system, you can use a stepwise, iterative process to find out how the system evolves in time. Every student can learn something from this, and maybe they can understand the concepts behind the science better.</p>
+<p>When using loops, it is also easier to change the premises for our models. We can also change our models to be non-continous, since we can alter them at discrete steps. Let us take bacterial growth as an example. It is common to model bacterial growth as a continuous exponential function. If we start with 100 bacteria and estimate that the growth is 20 percent per hour, we can find out how many bacteria we have after t hours by using the following function:</p>
+<div class="math notranslate nohighlight">
+\[ f(t) = 100\cdot 1.20^t \]</div>
+<p>If t = 30, we can calculate that we have 23 737 bacteria after 30 hours (we round down to the nearest whole bacterium). We can create a program that does exactly the same thing and gives the same result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">code</span><span class="o">-</span><span class="n">block</span><span class="p">}</span> <span class="n">python</span>
+<span class="n">B0</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">B0</span>
+<span class="n">hourse</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">growth_factor</span> <span class="o">=</span> <span class="mf">1.20</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hours</span><span class="p">):</span>
+    <span class="n">B</span> <span class="o">=</span> <span class="n">B</span><span class="o">*</span><span class="n">growth_factor</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of bateria is:&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>This program does the same thing as putting t = 30 into the function above. But what if we introduce a variable for growth factor? The conditions under which the bacteria live may change due to temperature, access to nutrients or the like. When we program, we can enter such assumptions and easily change them. In this way, programming provides more opportunities than continuous functions to study and experiment with dynamic systems. The same applies to situations such as variable interest rates in the bank or changes in a physical or chemical system. In such situations, programming is really useful! Click on the drop-down menu below to see an example of such a program. We will also look at savings and interest rates in activity 1 below.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Dynamic modeling</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">B0</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">B</span> <span class="o">=</span> <span class="n">B0</span>
+<span class="n">hours</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">growth_factor</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.20</span><span class="p">,</span> <span class="mf">1.30</span><span class="p">,</span> <span class="mf">1.42</span><span class="p">,</span> <span class="mf">1.48</span><span class="p">]</span>
+<span class="n">temperature</span> <span class="o">=</span> <span class="mi">30</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">hours</span><span class="p">):</span> 
+    <span class="k">if</span> <span class="mi">30</span> <span class="o">&lt;=</span> <span class="n">temperature</span> <span class="o">&lt;=</span> <span class="mi">40</span><span class="p">:</span> 
+        <span class="n">growth</span> <span class="o">=</span> <span class="n">growth_factor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="mi">40</span> <span class="o">&lt;</span> <span class="n">temperature</span> <span class="o">&lt;</span> <span class="mi">52</span><span class="p">:</span> 
+        <span class="n">growth</span> <span class="o">=</span> <span class="n">growth_factor</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="k">elif</span> <span class="mi">53</span> <span class="o">&lt;=</span> <span class="n">temperature</span> <span class="o">&lt;=</span> <span class="mi">65</span><span class="p">:</span> 
+        <span class="n">growth</span> <span class="o">=</span> <span class="n">growth_factor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">growth</span> <span class="o">=</span> <span class="n">growth_factor</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> 
+    <span class="n">B</span> <span class="o">=</span> <span class="n">B</span><span class="o">*</span><span class="n">growth</span> 
+    <span class="n">temperature</span> <span class="o">=</span> <span class="n">temperature</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The number of bateria is:&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">B</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Discussion</p>
+<p>“Thinking in loops” (iterative thinking) can be a challenge in the beginning. Loops are useful for a lot, so it is well worth practicing.</p>
+<ul class="simple">
+<li><p>Can you think of any mathematical or scientific problems that can be solved with loops?</p></li>
+<li><p>Can loop tables be an effective tool in your teaching? If so, how will you use them?</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs/the_basics"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="conditionals.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">2.3. </span>Conditionals and logic</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="data_plotting.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Handling data with Python</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The University of Oslo<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

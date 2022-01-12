@@ -1,0 +1,773 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphical elements &#8212; Programming and Computational Thinking</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pedagogical principles" href="pedagogical_principles.html" />
+    <link rel="prev" title="4. Handling data with Python" href="the_basics/data_plotting.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-uio.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programming and Computational Thinking</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to ProComp
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Introduction to programming and computational thinking
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_basics/scientific_programming.html">
+   1. Why scientific programming?
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="the_basics/variables_conditionals.html">
+   2. Variables and conditionals
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="the_basics/variables.html">
+     2.2. Variables and arithmetic
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="the_basics/conditionals.html">
+     2.3. Conditionals and logic
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_basics/loops.html">
+   3. Loops and iterative thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="the_basics/data_plotting.html">
+   4. Handling data with Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Working instructions
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Graphical elements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pedagogical_principles.html">
+   Pedagogical principles
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/howto.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdocs/howto.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/docs/howto.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boxes">
+   Boxes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#panels">
+   Panels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dropdowns">
+   Dropdowns
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabs">
+   Tabs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quotes">
+   Quotes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pseudocodes">
+   Pseudocodes
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Graphical elements</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boxes">
+   Boxes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#panels">
+   Panels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dropdowns">
+   Dropdowns
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tabs">
+   Tabs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#figures">
+   Figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quotes">
+   Quotes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pseudocodes">
+   Pseudocodes
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="graphical-elements">
+<h1>Graphical elements<a class="headerlink" href="#graphical-elements" title="Permalink to this headline">¶</a></h1>
+<p>Here’s an overview of extra graphical and structural elements which can be generated through Myst Markdown to use in Jupyterbooks. Three apostrophes (```) is used for starting and ending Myst Markdown content. When building structures inside structures, you need to increase the number of apostrophes. For example, if you want a code inside a box inside a tab, the tab has to be initialized with five apostrophes, the box with three apostrophes and the code with three apostrophes.</p>
+<div class="section" id="boxes">
+<h2>Boxes<a class="headerlink" href="#boxes" title="Permalink to this headline">¶</a></h2>
+<div class="note admonition">
+<p class="admonition-title">Learning goals</p>
+<p>Used for learning goals.</p>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Excercises</p>
+<p>Used for excercises.</p>
+</div>
+<div class="caution admonition">
+<p class="admonition-title">Remember</p>
+<p>Used for highlighting important stuff.</p>
+</div>
+<div class="danger admonition">
+<p class="admonition-title">Warning</p>
+<p>Generally not used.</p>
+</div>
+<div class="error admonition">
+<p class="admonition-title">Error</p>
+<p>Generally not used.</p>
+</div>
+<p>This was created by the following code in Markdown:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{admonition} Learning goals
+:class: note
+Used for learning goals.
+```
+
+```{admonition} Excercises
+:class: hint
+Used for excercises.
+```
+
+```{admonition} Remember
+:class: caution
+Used for highlighting important stuff.
+```
+
+```{admonition} Warning
+:class: danger
+Generally not used.
+```
+
+```{admonition} Error
+:class: error
+Generally not used.
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="panels">
+<h2>Panels<a class="headerlink" href="#panels" title="Permalink to this headline">¶</a></h2>
+<p>Panels are not generally used, but is a possible way of structuring content if it is seen as useful.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text">Content of the left panel.</p>
+<p class="card-text"><img alt="Jupyter Book Badge" src="https://img.shields.io/badge/Programming-Computational%20thinking-red" /></p>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">Panel header 2</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Panel body 2</p>
+</div>
+<div class="card-footer docutils">
+<p class="card-text">Panel footer 2</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Panels can be made with the following code. In the first panel we also have a random badge generated through <span class="xref myst">shields.io</span>.</p>
+<ul class="simple">
+<li><p>The panels are separated with —</p></li>
+<li><p>The first header is marked with ^^^</p></li>
+<li><p>The second header is maked with +++</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{panels}
+Content of the left panel.
+
+[![Jupyter Book Badge](https://img.shields.io/badge/Programming-Computational%20thinking-red)]
+
+---
+
+Panel header 2
+^^^
+Panel body 2
++++
+Panel footer 2
+```
+````
+</pre></div>
+</div>
+<p>We can also specify the number of colomns and the format of the borders:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">Header A</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Body A</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">Header B</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Body B</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-4 docutils">
+<div class="card w-100 border-2 docutils">
+<div class="card-header docutils">
+<p class="card-text">Header C</p>
+</div>
+<div class="card-body docutils">
+<p class="card-text">Body C</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Which is generated with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{panels}
+:column: col-4
+:card: border-2
+Header A
+^^^
+Body A
+---
+Header B
+^^^
+Body B
+---
+Header C
+^^^
+Body C
+````
+</pre></div>
+</div>
+</div>
+<div class="section" id="dropdowns">
+<h2>Dropdowns<a class="headerlink" href="#dropdowns" title="Permalink to this headline">¶</a></h2>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Hint!</p>
+<p>This is mainly used for extra information and hints.</p>
+</div>
+<p>Dropdown menus are created by adding the class <em>dropdown</em> to an admonition (box):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{admonition} Hint!
+:class: tip, dropdown
+This is mainly used for extra information and hints.
+```
+</pre></div>
+</div>
+<p>Code is included in dropdowns like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{admonition} Solution
+:class: tip, dropdown
+```{code-block} python
+for i in range(10):
+    print(&quot;You are cool!&quot;)
+```
+You can do it like this or you can choose not to.
+````
+</pre></div>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Solution</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You are cool!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You can do it like this or you can choose not to.</p>
+</div>
+</div>
+<div class="section" id="tabs">
+<h2>Tabs<a class="headerlink" href="#tabs" title="Permalink to this headline">¶</a></h2>
+<p>We can create tabs with text and/or coding blocks to separate content, like disciplinary specific such as physics examples, chemistry examples, life science examples and so on.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="48c088da-28d4-4be8-b170-5c1f7c0d9666" name="c57bb1e8-e713-4f2b-936f-673754bfa021" type="radio">
+</input><label class="tabbed-label" for="48c088da-28d4-4be8-b170-5c1f7c0d9666">
+C++</label><div class="tabbed-content docutils">
+<p>Here’s how it’s done in C++</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+<input id="60048f4a-c889-46e4-9b5f-a779ea794e24" name="c57bb1e8-e713-4f2b-936f-673754bfa021" type="radio">
+</input><label class="tabbed-label" for="60048f4a-c889-46e4-9b5f-a779ea794e24">
+Python</label><div class="tabbed-content docutils">
+<p>Here’s how it’s done in Python</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">return</span>
+</pre></div>
+</div>
+</div>
+<input id="ac104f66-18be-4db1-ab1d-28ef47b2572e" name="c57bb1e8-e713-4f2b-936f-673754bfa021" type="radio">
+</input><label class="tabbed-label" for="ac104f66-18be-4db1-ab1d-28ef47b2572e">
+Java</label><div class="tabbed-content docutils">
+<p>Here’s how it’s done in Java</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<input id="2d6cd0ef-fa74-4b87-b08a-4c308e00e21f" name="c57bb1e8-e713-4f2b-936f-673754bfa021" type="radio">
+</input><label class="tabbed-label" for="2d6cd0ef-fa74-4b87-b08a-4c308e00e21f">
+Julia</label><div class="tabbed-content docutils">
+<p>Here’s how it’s done in Julia</p>
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">main</span><span class="p">()</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<input id="b43c8aee-eb96-4c18-88b4-b3fae5f8a47f" name="c57bb1e8-e713-4f2b-936f-673754bfa021" type="radio">
+</input><label class="tabbed-label" for="b43c8aee-eb96-4c18-88b4-b3fae5f8a47f">
+Fortran</label><div class="tabbed-content docutils">
+<p>Here’s how it’s done in Fortran</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">PROGRAM </span><span class="n">main</span><span class="w"></span>
+<span class="k">END PROGRAM </span><span class="n">main</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>These tabs are generated with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{tabbed} C++
+Here&#39;s how it&#39;s done in C++
+```{code-block} c++
+
+int main(const int argc, const char **argv) {
+  return 0;
+}
+```
+````
+
+````{tabbed} Python
+Here&#39;s how it&#39;s done in Python
+```{code-block} python
+
+def main():
+    return
+```
+````
+
+````{tabbed} Java
+Here&#39;s how it&#39;s done in Java
+```{code-block} java
+
+class Main {
+    public static void main(String[] args) {
+    }
+}
+```
+````
+
+````{tabbed} Julia
+Here&#39;s how it&#39;s done in Julia
+```{code-block} julia
+
+function main()
+end
+```
+````
+
+````{tabbed} Fortran
+Here&#39;s how it&#39;s done in Fortran
+```{code-block} fortran
+
+PROGRAM main
+END PROGRAM main
+```
+````
+</pre></div>
+</div>
+</div>
+<div class="section" id="figures">
+<h2>Figures<a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h2>
+<p>You can insert figures like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{figure} ./path/to/figure.jpg
+:name: label
+
+caption
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="quotes">
+<h2>Quotes<a class="headerlink" href="#quotes" title="Permalink to this headline">¶</a></h2>
+<p>One can also make nicely formatted quotes:</p>
+<blockquote class="epigraph">
+<div><p>Everybody should learn how to think, because it teaches you how to program.</p>
+<p class="attribution">—Andreas Haraldsrud, 2021</p>
+</div></blockquote>
+<blockquote class="epigraph">
+<div><p>Jeg vil også ha et sitat.</p>
+<p class="attribution">—Cathrine Tellefsen, 2021</p>
+</div></blockquote>
+<p>which is made with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{epigraph}
+Everybody should learn how to think, because it teaches you how to program.
+
+-- Andreas Haraldsrud, 2021
+```
+
+```{epigraph}
+Jeg vil også ha et sitat.
+
+-- Cathrine Tellefsen, 2021
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="pseudocodes">
+<h2>Pseudocodes<a class="headerlink" href="#pseudocodes" title="Permalink to this headline">¶</a></h2>
+<p>For pseudocodes use the code box with language <em>text</em>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{code-block} text
+number = 0
+repeat 10 times:
+    number = number + 3
+    show number on screen
+```
+</pre></div>
+</div>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>number = 0
+repeat 10 times:
+    number = number + 3
+    show number on screen
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="the_basics/data_plotting.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">4. </span>Handling data with Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="pedagogical_principles.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pedagogical principles</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By The University of Oslo<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
