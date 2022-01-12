@@ -9,3 +9,8 @@ if p + q == 1:
     print("3. Individuals with genotype aa:",aa)
 else:
     print("Error: The sum of p and q is not equal to 1!")
+    
+from numpy import sqrt 
+
+for i in range(1,26,2):
+    print(sqrt(i))
